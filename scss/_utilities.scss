@@ -1,0 +1,80 @@
+@import './variable';
+$spacer: 16px;
+$spacers: (
+    0: 0,             // 0 px
+    1: $spacer * 0.5, // 8px
+    2: $spacer * 1,   // 16px
+    3: $spacer * 1.5, // 24px
+    4: $spacer * 2.5, // 40px
+    5: $spacer * 3,   // 48px
+    6: $spacer * 4,   // 64px
+);
+
+@each $name, $var in $spacers {
+    .mt-#{$name} {
+        margin-top: $var;
+    }
+    .mb-#{$name} {
+        margin-bottom: $var;
+    }
+    .ml-#{$name} {
+        margin-left: $var;
+    }
+    .mr-#{$name} {
+      margin-right: $var;
+  }
+    .pr-#{$name} {
+        padding-right: $var;
+    }
+    .pl-#{$name} {
+        padding-left: $var;
+    }
+    .pt-#{$name} {
+        padding-top: $var;
+    }
+    .pb-#{$name} {
+        padding-bottom: $var;
+    }
+    .py-#{$name} {
+        padding-top: $var;
+        padding-bottom: $var;
+    }
+    .my-#{$name} {
+        margin-top: $var;
+        margin-bottom: $var;
+    }
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.bg-primary {
+    background-color: $primary-color;
+}
+
+.d-inline-bolck {
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-white {
+    color: $white-color;
+}
+
+.text-small {
+    font-size: $font-size-small;
+}
+
+.border-left {
+    border-left: 1px $primary-light-color solid;
+}
+
+.text-max-width {
+    max-width: 53%;
+}
